@@ -188,9 +188,9 @@ void inorder(struct tree *leaf)
 	{
 		return;
 	}
-	preorder(leaf->left);
+	inorder(leaf->left);
 	printf("data is : %d\n",leaf->data);
-	preorder(leaf->right);
+	inorder(leaf->right);
 }
 
 void postorder(struct tree *leaf)
@@ -199,8 +199,8 @@ void postorder(struct tree *leaf)
 	{
 		return;
 	}
-	preorder(leaf->left);
-	preorder(leaf->right);
+	postorder(leaf->left);
+	postorder(leaf->right);
 	printf("data is %d\n",leaf->data);
 }
 
